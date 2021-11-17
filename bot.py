@@ -54,11 +54,10 @@ if __name__ == "__main__":
     sleep(1)
     mainmenue()
 
-
-fff = open('opnames.txt','w')
-fff.writelines("eeee")
-fff.close()
-
-my_file=open('opnames.txt','r')
-file_lines=my_file.readlines()
-my_file.close()
+try:
+	my_file=open('opnames.txt','r')
+	file_lines=my_file.readlines()
+	my_file.close()
+except FileNotFoundError:
+		print(f'\n{Fore.YELLOW}file not found | making it for you{Fore.RESET}\n')
+		os.system('type nul > opnames.txt')
