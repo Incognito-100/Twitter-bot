@@ -5,6 +5,15 @@ import os
 from internals.defs.defs import *
 from internals.common import clear, THIS_VERSION, setTitle
 
+try:
+	import tweepy
+
+except ModuleNotFoundError:
+		print(f'\n{Fore.YELLOW}modules not found | Installing for you{Fore.RESET}\n')
+		os.system("pip install tweepy")
+		os.system("pip install colorama")
+		os.system("pip install time")
+ 
 
 def mainmenue():
 	setTitle(f"twitter bot {THIS_VERSION}")
@@ -55,12 +64,9 @@ def mainmenue():
 
 
 	elif choice == '4':
-		command1 = "del opnames.txt"
-		command2 = "del scraped.txt"
-		command3 = "del fnames.txt"
-		os.system(command1)
-		os.system(command2)
-		os.system(command3)
+		os.system("del opnames.txt")
+		os.system("del scraped.txt")
+		os.system("del fnames.txt")
 		
 
 	elif choice == '5':
