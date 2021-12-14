@@ -30,11 +30,12 @@ def mainmenue():
 	choice = str(input(
 			f'{Fore.GREEN}[{Fore.CYAN}>>>{Fore.GREEN}] {Fore.RESET}Choice: {Fore.LIGHTRED_EX}'))
 
-	#all options 
+	#all options
 	if choice == '1':
+		clear()
 		opt1()
 
-	
+
 	elif choice == '2':
 		opt2()
 
@@ -51,8 +52,8 @@ def mainmenue():
 
 
 if __name__ == "__main__":
-    sleep(1)
-    mainmenue()
+	sleep(1)
+	mainmenue()
 
 try:
 	my_file=open('opnames.txt','r')
