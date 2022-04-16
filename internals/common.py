@@ -4,7 +4,6 @@ from colorama import Fore
 from time import sleep
 from itertools import cycle
 
-
 THIS_VERSION = "1.3"
 
 def clear():

@@ -34,6 +34,11 @@ def opt1():
             if line != '\n':
                 api.update_status(line)
                 print("tweeting next in 15 minuts")
+                #make a progress bar for the user to see how long it takes to tweet the next line in 15 minutes
+                for i in range(0, 15):
+                    print(f"{i}/15")
+                    sleep(60)
+                    clear()
             else:
                 pass
         except tweepy.TweepError as e:

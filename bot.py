@@ -6,7 +6,6 @@ from internals.defs.defs import *
 from internals.common import clear, THIS_VERSION, setTitle
 from internals.credentials import *
 
-
 def mainmenue():
 	setTitle(f"PIP GUI")
 	#Main banner
